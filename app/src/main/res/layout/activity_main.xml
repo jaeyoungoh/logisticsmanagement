@@ -2,11 +2,47 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_img"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/"
     tools:context=".MainActivity">
+<!--  Head -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#5C5C5C"
+        app:layout_constraintBottom_toTopOf="@+id/TopGuideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
+        <TextView
+            android:id="@+id/txtHomeHeader"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="HOME"
+            android:textColor="#FFFFFF"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnMenu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnMenu"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/menu_icon_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!-- Body -->
     <Button
         android:id="@+id/btnSearch"
         android:layout_width="0dp"
@@ -14,7 +50,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="50dp"
-        android:text="조회"
+        android:background="@drawable/qr_code_icon"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSending"
         app:layout_constraintEnd_toStartOf="@+id/btnPackaging"
@@ -28,7 +64,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="50dp"
-        android:text="포장"
+        android:background="@drawable/boxes"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSetting"
         app:layout_constraintEnd_toStartOf="@+id/RightGuideline"
@@ -42,7 +78,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="100dp"
-        android:text="발송"
+        android:background="@drawable/shipping_icon"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/BottomGuideline"
         app:layout_constraintEnd_toStartOf="@+id/btnSetting"
@@ -56,7 +92,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="100dp"
-        android:text="설정"
+        android:background="@drawable/settings_icon"
         android:textSize="50sp"
         app:layout_constraintBottom_toTopOf="@+id/BottomGuideline"
         app:layout_constraintEnd_toStartOf="@+id/RightGuideline"
@@ -68,7 +104,7 @@
         android:layout_width="1dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.15"
+        app:layout_constraintGuide_percent="0.1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
