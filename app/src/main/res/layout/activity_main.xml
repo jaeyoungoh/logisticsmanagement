@@ -19,7 +19,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.0">
-
         <TextView
             android:id="@+id/txtHomeHeader"
             android:layout_width="0dp"
@@ -32,7 +31,6 @@
             app:layout_constraintEnd_toEndOf="@+id/btnMenu"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <ImageButton
             android:id="@+id/btnMenu"
             android:layout_width="70dp"
@@ -59,7 +57,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TopBodyGuideline"
         app:layout_constraintVertical_chainStyle="packed">
-
         <ImageButton
             android:id="@+id/btnSearch"
             android:layout_width="0dp"
@@ -76,7 +73,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="0dp"
@@ -103,7 +99,6 @@
         app:layout_constraintStart_toEndOf="@+id/cstrQRSearch"
         app:layout_constraintTop_toBottomOf="@+id/TopBodyGuideline"
         app:layout_constraintVertical_chainStyle="packed">
-
         <ImageButton
             android:id="@+id/btnPackaging"
             android:layout_width="0dp"
@@ -119,8 +114,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
-
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="0dp"
@@ -134,7 +127,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnPackaging" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cstrSending"
@@ -185,7 +177,6 @@
         android:layout_marginEnd="2dp"
         android:background="@drawable/solid_edge"
         app:layout_constraintBottom_toTopOf="@+id/BottomGuideline"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cstrSending"
         app:layout_constraintTop_toBottomOf="@+id/cstrPackaging"
@@ -223,7 +214,6 @@
             app:layout_constraintTop_toBottomOf="@+id/btnSetting" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/TopBodyGuideline"
         android:layout_width="1dp"
@@ -231,7 +221,6 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="269dp"
         app:layout_constraintTop_toTopOf="parent" />
-
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/BottomGuideline"
         android:layout_width="1dp"
@@ -239,21 +228,4 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintGuide_percent="0.85" />
-
-<!--    <androidx.constraintlayout.widget.Guideline-->
-<!--        android:id="@+id/LeftGuideline"-->
-<!--        android:layout_width="1dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintGuide_percent="0.15"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-<!--    <androidx.constraintlayout.widget.Guideline-->
-<!--        android:id="@+id/RightGuideline"-->
-<!--        android:layout_width="1dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintGuide_percent="0.85" />-->
-
 </androidx.constraintlayout.widget.ConstraintLayout>
