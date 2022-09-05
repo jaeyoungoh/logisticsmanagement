@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_img"
-    >
-
+    android:background="@drawable/bg_img">
     <!--  Head -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cstrMain"
@@ -30,33 +28,33 @@
             android:scaleType="fitXY"
             android:src="@drawable/ic_baseline_arrow_back_ios_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/searchingHeaderIcon"
+            app:layout_constraintEnd_toStartOf="@+id/packagingHeaderIcon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
         <ImageView
-            android:id="@+id/searchingHeaderIcon"
+            android:id="@+id/packagingHeaderIcon"
             android:layout_width="70dp"
             android:layout_height="0dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txtSearchingHeader"
+            app:layout_constraintEnd_toStartOf="@+id/txtPackagingHeader"
             app:layout_constraintStart_toEndOf="@+id/btnBack"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/qr_code_icon_white" />
+            android:src="@drawable/shipping_icon_white" />
         <TextView
-            android:id="@+id/txtSearchingHeader"
+            android:id="@+id/txtPackagingHeader"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="30dp"
             android:gravity="center_vertical"
-            android:text="조  회"
+            android:text="발  송"
             android:textColor="#FFFFFF"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnMenu"
-            app:layout_constraintStart_toEndOf="@+id/searchingHeaderIcon"
+            app:layout_constraintStart_toEndOf="@+id/packagingHeaderIcon"
             app:layout_constraintTop_toTopOf="parent" />
         <ImageButton
             android:id="@+id/btnMenu"
@@ -68,7 +66,7 @@
             android:src="@drawable/menu_icon_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txtSearchingHeader"
+            app:layout_constraintStart_toEndOf="@+id/txtPackagingHeader"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!--    body -->
@@ -82,21 +80,60 @@
         android:background="@drawable/rect_outline"
         android:padding="20dp"
         android:paddingHorizontal="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toTopOf="@+id/SaveConstraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cstrMain" />
     <!--  Bottom -->
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+        android:id="@+id/SaveConstraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#4472C4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+        <ImageView
+            android:id="@+id/icon_save"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/save_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtSave"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/txtSave"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:text="저  장"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/icon_save"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ClearConstraintLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#999595"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.09"
-        app:layout_constraintStart_toStartOf="parent">
-
+        app:layout_constraintWidth_percent="0.5">
         <ImageView
             android:id="@+id/icon_clear"
             android:layout_width="50dp"
@@ -106,27 +143,24 @@
             android:layout_marginBottom="10dp"
             android:scaleType="fitCenter"
             android:src="@drawable/clear_icon"
-            app:layout_constraintBottom_toBottomOf="parent"
-
-            app:layout_constraintEnd_toStartOf="@+id/txtClear"
             app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtClear"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
         <TextView
             android:id="@+id/txtClear"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
+            android:layout_width="112dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
-            android:gravity="center"
             android:text="CLEAR"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toEndOf="@+id/icon_clear"
             app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
